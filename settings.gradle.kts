@@ -16,4 +16,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "DailyPulse"
 include(":androidApp")
+include(":iosApp")
 include(":shared")

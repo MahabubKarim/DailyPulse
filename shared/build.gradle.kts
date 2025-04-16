@@ -15,19 +15,20 @@ kotlin {
             }
         }
     }
-    
-    listOf(
+
+    for (it in listOf(
         iosX64(),
         iosArm64(),
         iosSimulatorArm64()
-    ).forEach {
+    )) {
         it.binaries.framework {
             baseName = "shared"
-            isStatic = true
+            //isStatic = true
         }
     }
 
     sourceSets {
+        val commonMain by getting
         commonMain.dependencies {
             //put your multiplatform dependencies here
         }
